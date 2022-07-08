@@ -22,7 +22,7 @@ script:
   # Tagging
   - docker tag udagram-api-feed ludten/udagram-api-feed:v3
   - docker tag udagram-api-user ludten/udagram-api-user:v3
-  - docker tag udagram-frontend ludten/udagram-frontend:v3
+  - docker tag udagram-frontend ludten/udagram-frontend:v4
   - docker tag reverseproxy ludten/reverseproxy:v3
 
 # Push
@@ -30,5 +30,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push ludten/udagram-api-feed:v3
   - docker push ludten/udagram-api-user:v3
-  - docker push ludten/udagram-frontend:v3
+  - docker push ludten/udagram-frontend:v4
   - docker push ludten/reverseproxy:v3
