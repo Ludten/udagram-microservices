@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: ludten/udagram-frontend:v3
+        image: ludten/udagram-frontend:v4
         ports:
         - containerPort: 80
