@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reverseproxy
+  labels:
+    app: reverseproxy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: reverseproxy
+  template:
+    metadata:
+      labels:
+        app: reverseproxy
+    spec:
+      containers:
+      - name: reverseproxy
+        image: ludten/reverseproxy:v3
+        resources:
+          requests:
+            memory: "400Mi"
+          limits:
+            memory: "600Mi"
+        ports:
+        - containerPort: 8080
