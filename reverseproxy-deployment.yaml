@@ -19,8 +19,8 @@ spec:
         image: ludten/reverseproxy:v3
         resources:
           requests:
-            memory: "400Mi"
+            memory: "1000Mi"
           limits:
-            memory: "600Mi"
+            memory: "2000Mi"
         ports:
         - containerPort: 8080
