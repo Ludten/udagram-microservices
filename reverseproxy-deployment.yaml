@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: ludten/reverseproxy:v3
+        image: ludten/reverseproxy:v5
         resources:
           requests:
             memory: "1000Mi"
